@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:background="@drawable/bg_gradient"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take Photo"
+        android:id="@+id/photoButton"
+        android:onClick="takePhoto"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/galleryRecyclerView"
+        android:layout_above="@id/photoButton"
+        />
+
+    <com.ortiz.touchview.TouchImageView
+        android:visibility="gone"
+        android:background="#66000000"
+        android:id="@+id/zoom_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.ortiz.touchview.TouchImageView>
+</FrameLayout>

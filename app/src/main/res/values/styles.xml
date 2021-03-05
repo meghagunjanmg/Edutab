@@ -1,0 +1,113 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">KolnMesseDeutz.otf</item>
+    </style>
+    <style name="TextAppearance.AppCompat."
+        parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="TextAppearance.AppCompat.1"
+        parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:background">@color/cardview_dark_background</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.AppBarOverlay." parent="ThemeOverlay.AppCompat.Light" >
+        <item name="android:color">@color/colorAccent3</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <style name="TextViewStyleHeading" parent="android:Widget.DeviceDefault.Light.TextView">
+        <item name="android:fontFamily">@font/kgcorner</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextViewStyleSubHeading" parent="android:Widget.DeviceDefault.Light.TextView">
+        <item name="android:fontFamily">@font/kgcorner</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextViewStyleNormal" parent="android:Widget.DeviceDefault.Light.TextView">
+        <item name="android:fontFamily">@font/kgcorner</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+
+
+
+
+    <style name="AppTheme.WhiteBackground" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/md_white_1000</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/primaryText</item>
+        <item name="actionMenuTextColor">@color/secondaryText</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+    </style>
+    <style name="MyTheme" parent="Theme.AppCompat">
+        <item name="drawerArrowStyle">@style/MyDrawerArrowToggle</item>
+    </style>
+
+    <style name="MyDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/WhiteText</item>
+    </style>
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/h1</item>
+        <item name="android:textColor">@color/iconAndText</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/accent</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/primaryText</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/md_grey_100</item>
+    </style>
+</resources>

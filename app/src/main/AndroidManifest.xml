@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.edutab">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".notepad.activities.home.HomeActivity"
+            android:label="@string/app_name"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="file"/>
+                <data android:mimeType="*/*"/>
+                <data android:pathPattern=".*\\.nbu"/>
+                <data android:host="*"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.WhiteBackground"
+            android:name=".notepad.activities.editfolders.EditFoldersActivity"
+            android:label="Edit Folders"
+            >
+        </activity>
+        <activity
+            android:name=".notepad.activities.note.NoteActivity"
+            android:label="Note Activity"
+            android:windowSoftInputMode="adjustResize|stateUnchanged"
+            >
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.WhiteBackground"
+            android:name=".notepad.activities.DebugActivity"
+            android:label="Debug Activity"
+            >
+        </activity>
+        <activity
+            android:name=".notepad.activities.note.DrawingActivity"
+            android:label="Drawing Activity"
+            >
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.WhiteBackground"
+            android:name=".notepad.activities.addtofolders.AddToFoldersActivity"
+            android:label="Edit Folders"
+            >
+        </activity>
+
+
+        <activity android:name=".CamaraIntentActivity"></activity>
+        <activity android:name=".activity_gallery" />
+        <activity
+            android:name=".activity_calculator"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".activity_play_video"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity_practice_questions"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".dictionary_activity"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".activity_video"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".activity_pdf"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".activity_action"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".activity_subjects_lists"
+            android:configChanges="orientation"
+            android:icon="@color/colorAccent3" >
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW"/>
+
+            <category android:name="android.intent.category.DEFAULT"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+
+            <data android:scheme="file"/>
+            <data android:mimeType="*/*"/>
+            <data android:pathPattern=".*\\.nbu"/>
+            <data android:host="*"/>
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity_practice_quiz"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".activity_chapters_list"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".activity_main_splash"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:launchMode="singleInstance"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".MyAdmin"
+            android:description="@string/action_settings"
+            android:label="@string/action_settings"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/my_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view" >
+
+        <group android:checkableBehavior="single">
+
+            <item
+                android:iconTint="@color/md_black_1000"
+                android:icon="@drawable/ic_baseline_ondemand_video_24"
+                android:id="@+id/demo"
+                android:title="Demonstration/प्रदर्शन" />
+
+            <item
+                android:iconTint="@color/md_black_1000"
+                android:icon="@drawable/ic_baseline_library_books_24"
+                android:id="@+id/dictionary"
+                android:title="Dictionary/शब्दकोश" />
+            <item
+                android:iconTint="@color/md_black_1000"
+
+                android:icon="@drawable/ic_menu_camera"
+                android:id="@+id/camera"
+                android:title="Camera/कैमरा" />
+            <item
+                android:iconTint="@color/md_black_1000"
+                android:icon="@drawable/ic_image_box"
+                android:id="@+id/gallery"
+                android:title="Gallery/गैलरी" />
+            <item
+                android:iconTint="@color/md_black_1000"
+                android:icon="@drawable/ic_baseline_format_list_numbered_24"               android:id="@+id/calc"
+                android:title="Calculator/कैलकुलेटर" />
+
+            <item
+                android:iconTint="@color/md_black_1000"
+                android:icon="@drawable/ic_note_white_24dp"
+                android:id="@+id/notes"
+                android:title="Notes/नोट्स" />
+
+            <item
+                android:iconTint="@color/md_black_1000"
+                android:icon="@drawable/ic_baseline_message_24"
+                android:id="@+id/meet"
+                android:title="Online Classes/ऑनलाइन कक्षाएं" />
+
+
+
+
+            <item
+                android:iconTint="@color/md_black_1000"
+                android:icon="@drawable/ic_baseline_g_translate_24"
+                android:id="@+id/lang"
+                android:title="Change Language/भाषा बदलें" />
+        </group>
+
+    </menu>
+
+

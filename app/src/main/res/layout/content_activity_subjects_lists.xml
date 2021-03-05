@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/toolbar"></include>
+  <include layout="@layout/chapter_banner"></include>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/math_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:elevation="10dp"
+                    android:src="@drawable/maths" />
+
+                <Button
+                    android:id="@+id/maths"
+                    style="@style/TextViewStyleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/alt_1"
+                    android:text="Maths" />
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/geo_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:elevation="10dp"
+                    android:src="@drawable/geography" />
+
+                <Button
+                    android:id="@+id/geo"
+                    style="@style/TextViewStyleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/alt_2"
+                    android:text="Geography" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/his_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:elevation="10dp"
+                    android:src="@drawable/history" />
+
+                <Button
+                    android:id="@+id/his"
+                    style="@style/TextViewStyleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/alt_1"
+                    android:text="History" />
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/pol_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:elevation="10dp"
+                    android:src="@drawable/sst" />
+
+                <Button
+                    android:id="@+id/pol"
+                    style="@style/TextViewStyleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/alt_2"
+                    android:text="Political\nScience" />
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/sci_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:elevation="10dp"
+                    android:src="@drawable/science" />
+
+                <Button
+                    android:id="@+id/sci"
+                    style="@style/TextViewStyleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/alt_1"
+                    android:text="Science" />
+            </FrameLayout>
+
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/eng_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:elevation="10dp"
+                    android:src="@drawable/english_language" />
+
+                <Button
+                    android:background="@color/alt_2"
+                    android:id="@+id/eng"
+                    style="@style/TextViewStyleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="English" />
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/sans_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:elevation="10dp"
+                    android:src="@drawable/sanskrit" />
+
+                <Button
+                    android:id="@+id/sans"
+                    style="@style/TextViewStyleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/alt_1"
+                    android:text="Sanskrit" />
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/hin_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:elevation="10dp"
+                    android:src="@drawable/hindi" />
+
+                <Button
+                    android:id="@+id/hin"
+                    style="@style/TextViewStyleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/alt_2"
+                    android:text="Hindi" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/gk_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:elevation="10dp"
+                    android:src="@drawable/gk" />
+
+                <Button
+                    android:background="@color/alt_1"
+                    android:id="@+id/gk"
+                    style="@style/TextViewStyleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="General Knowledge" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/eng_gram_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:elevation="10dp"
+                    android:src="@drawable/english" />
+
+                <Button
+                    android:id="@+id/eng_grammar"
+                    style="@style/TextViewStyleSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/alt_2"
+                    android:text="English Grammar" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

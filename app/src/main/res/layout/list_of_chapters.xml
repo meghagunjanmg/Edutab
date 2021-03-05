@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<include layout="@layout/toolbar">
+</include>
+
+  <include layout="@layout/chapter_banner"></include>
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycler"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    tools:listitem="@layout/item_chapters_list"
+    android:layout_height="match_parent">
+
+</androidx.recyclerview.widget.RecyclerView>
+
+    <WebView
+        android:padding="10dp"
+        android:visibility="gone"
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+</LinearLayout>

@@ -1,0 +1,11 @@
+#myDiv,#myDiv2,#myDiv3,#myDiv4,#myDiv5,#myDiv6 {
+  border: 5px outset red;
+  background-color: lightblue;
+  text-align: center;
+  display: none;
+}
+#myDiv0{
+  /* background-color: lightblue; */
+  text-align: center;
+  display: none;
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar"></include>
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            style="@style/TextViewStyleHeading"
+            android:textColor="@color/colorAccent3"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Preferable Language">
+        </TextView>
+            <androidx.cardview.widget.CardView
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/colorAccent3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:padding="10dp"
+                    android:text="English"
+                    style="@style/TextViewStyleSubHeading"
+                    android:id="@+id/eng"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/colorAccent3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:padding="10dp"
+                    android:text="हिन्दी"
+                    style="@style/TextViewStyleSubHeading"
+                    android:id="@+id/hin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

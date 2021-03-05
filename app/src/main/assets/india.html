@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>India</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="shape.js"></script>
+
+    <style>
+      .container{
+    width: 80%;
+    display: flex;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+      .contain{
+  position: relative;
+  height: 500px;
+  width: 380px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  display:none;
+}
+.contain:hover{
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+}
+.contain .image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.contain .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.contain:hover .image img{
+  transform: scale(1.1);
+}
+.contain .card-content{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.card-content .wrapper{
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  background: #fff;
+  padding: 10px 25px;
+  box-shadow: -1px -1px 6px rgba(0,0,0,0.1);
+  transition: bottom 0.3s ease;
+}
+.contain:hover .card-content .wrapper{
+  bottom: 0px;
+}
+.wrapper .title{
+  font-size: 22px;
+  font-weight: 500;
+}
+.wrapper p{
+  font-size: 17px;
+  color: grey;
+}
+.wrapper .price{
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 23px;
+  font-weight: 600;
+  color: #456ABD;
+}
+.wrapper .content{
+  margin: 10px 0;
+}
+.wrapper .content .name{
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.wrapper .content .size-value{
+  width: 50%;
+  display: flex;
+  margin: 5px 0;
+  justify-content: space-between;
+}
+.content .size-value span{
+  display: block;
+  height: 28px;
+  width: 28px;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #456ABD;
+}
+.content .size-value span.active{
+  background: #456ABD;
+  color: #fff;
+}
+.content .colour-value{
+  width: 30%;
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+.content .colour-value span{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.content .colour-value span.white{
+  background: lightgrey;
+}
+.content .colour-value span.blue{
+  background: #456ABD;
+}
+.content .colour-value span.yellow{
+  background: #EAA523;
+}
+.content .colour-value span.active:after{
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: -4px;
+  top: -4px;
+  box-sizing: border-box;
+  border: 2px solid #456ABD;
+  border-radius: 50%;
+}
+.content .colour-value span.white.active:after{
+  border-color: lightgrey;
+}
+.content .colour-value span.yellow.active:after{
+  border-color: #EAA523;
+}
+.wrapper .btns{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .btns button{
+  height: 40px;
+  width: 100%;
+  margin: 0 10px;
+  border: 2px solid #456ABD;
+  background: #456ABD;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.card {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+</style>
+  </head>
+  <button style="width:100%;" type="button" class="btn btn-primary btn-lg btn-block" onclick="myFunction()">NATIONAL SYMBOLS</button>
+  <button style="width:100%;"type="button" class="btn btn-secondary btn-lg btn-block" onclick="myFunction2()">LEADERS OF OUR COUNTRY</button>
+  <body>
+<div class="container">
+<div class="row">
+<div class="col-sm-4">
+<div class="contain" id="myDiv">
+      <div class="image">
+        <img src="flag.gif" alt="">
+      </div>
+<div class="card-content">
+        <div class="wrapper">
+          <div class="title">
+          <h3><strong>INDIAN NATIONAL FLAG</strong></h3></div>
+<p>The National Flag is a horizontal tricolour of India saffron (kesaria) at the top, white in the middle and India green at the bottom in equal proportion. The ratio of width of the flag to its length is two to three. In the centre of the white band is a navy-blue wheel which represents the chakra.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="contain" id="myDiv2">
+      <div class="image">
+        <img src="tiger.gif" alt="">
+      </div>
+<div class="card-content">
+        <div class="wrapper">
+          <div class="title">
+          <h3><strong>NATIONAL ANIMAL</strong></h3></div>
+<p>The Royal Bengal Tiger is the national animal of India because of its rich cultural history, abundance, characteristics and conservation efforts.The national animal of a country is often a symbolic representation of the country’s rich heritage and culture.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="contain" id="myDiv3">
+      <div class="image">
+        <img src="lotus.gif" alt="">
+      </div>
+<div class="card-content">
+        <div class="wrapper">
+          <div class="title">
+          <h3><strong>NATIONAL FLOWER</strong></h3></div>
+<p>Lotus (Nelumbo Nucifera Gaertn) is the National Flower of India. It is a sacred flower and occupies a unique position in the art and mythology of ancient India and has been an auspicious symbol of Indian culture since time immemorial.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="container">
+<div class="row">
+<div class="col-sm-4">
+<div class="contain" id="myDiv4">
+      <div class="image">
+        <img src="peacock.gif" alt="">
+      </div>
+<div class="card-content">
+        <div class="wrapper">
+          <div class="title">
+          <h3><strong>NATIONAL BIRD</strong></h3></div>
+<p>The Peacock was declared the National Bird of India because of its rich religious and legendary involvement in Indian traditions. The criteria for this choice were many. The bird must be well-distributed within the country so it could truly 'national'. It must be recognisable to the common man.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="contain" id="myDiv5">
+      <div class="image">
+        <img src="hockey.gif" alt="">
+      </div>
+<div class="card-content">
+        <div class="wrapper">
+          <div class="title">
+          <h3><strong>NATIONAL SPORT</strong></h3></div>
+<p>Field Hockey is considered as the national game of India.The national sport of a country is designated either on the basis of the popularity of a game, or on the basis of its historical connect of that game.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="contain" id="myDiv6">
+      <div class="image">
+        <img src="emblem.gif" alt="">
+      </div>
+<div class="card-content">
+        <div class="wrapper">
+          <div class="title">
+          <h3><strong>NATIONAL EMBLEM</strong></h3></div>
+<p>The State Emblem of India, as the national emblem of the Republic of India is called, is an adaptation of the Lion Capital of Ashoka from 250 BCE at Sarnath, preserved in the Sarnath Museum near Varanasi. It has 4 lions that face 4 different directions, namely north, east, south, and west.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- <div class="container" id="myDiv0"> -->
+<div class="container">
+  <div class="row"id="myDiv0">
+    <div class="col-sm-4">
+  <div class="card"style="width: 36rem;">
+    <img class="card-img-top" src="modi.jpg" alt="Avatar" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title"><b>PRIME MINISTER OF INDIA</b></h4>
+      <p class="card-text"><strong>NARENDRA DAMODARDAS MODI</strong><br>An Indian politician serving as the 14th and current Prime Minister of India since 2014.He was the Chief Minister of Gujarat from 2001 to 2014 and is the Member of Parliament for Varanasi.</p>
+    </div>
+  </div>
+  </div>
+<!-- </div> -->
+  <div class="col-sm-4">
+  <div class="card"style="width: 36rem;">
+    <img class="card-img-top" src="rnk.jpg" alt="Avatar" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title"><b>PRESIDENT OF INDIA</b></h4>
+      <p class="card-text"><strong>RAM NATH KOVIND</strong><br>An Indian politician serving as the 14th and current President of India since 25 July 2017.Previously he had served as the 26th Governor of Bihar from 2015 to 2017 and was a Member of Parliament, Rajya Sabha from 1994 to 2006. Kovind was nominated as a presidential candidate by the ruling NDA coalition and won the 2017 presidential election.</p>
+    </div>
+  </div>
+</div>
+<div class="col-sm-4">
+<div class="card"style="width: 36rem;">
+  <img class="card-img-top" src="mvn.jpg" alt="Avatar" style="width:100%">
+  <div class="card-body">
+    <h4 class="card-title"><b>VICE-PRESIDENT OF INDIA</b></h4>
+    <p class="card-text"><strong>MUPPAVARAPU VENKAIAH NAIDU</strong><br>An Indian politician and the current Vice President of India and the Chairman of the Rajya Sabha,      since 11 August 2017.
+      Previously,he served as the Minister of Housing and Urban Poverty Alleviation, Urban Development and Information and Broadcasting in the Modi Cabinet.</p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
