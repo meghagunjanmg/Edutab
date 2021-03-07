@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-	android:background="@drawable/bg_gradient"
+	android:background="@color/bg"
 
 	android:id="@+id/zero_notes_view"
 		android:layout_width="match_parent"
@@ -16,7 +16,7 @@
 			android:layout_above="@+id/text1"
 			android:layout_centerHorizontal="true"
 			android:src="@drawable/ic_note_white_48dp"
-			android:tint="@color/md_blue_grey_400"
+			android:tint="@color/bg"
 			/>
 
 	<TextView

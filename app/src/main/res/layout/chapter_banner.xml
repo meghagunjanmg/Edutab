@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:elevation="4dp"
-    android:background="@drawable/bgcolor"
     android:orientation="horizontal"
     android:padding="8dp"
+    android:background="@color/colorAccent3"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -18,9 +18,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:id="@+id/title"
+            android:fontFamily="@font/circular"
             style="@style/TextViewStyleHeading"
-            android:textColor="#6c63ff"
-            android:textSize="24sp"
+            android:textColor="@color/md_black_1000"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Chapters">

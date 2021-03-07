@@ -20,7 +20,7 @@ import java.util.Locale;
 public class activity_chapters_list extends AppCompatActivity implements
         TextToSpeech.OnInitListener{
         RecyclerView recyclerView;
-        TextView textView;
+        TextView textView,showTitle;
         prefmanager pref;
         Toolbar toolbar;
         WebView webview;
@@ -34,6 +34,7 @@ public class activity_chapters_list extends AppCompatActivity implements
          pref = new prefmanager(this);
         tts = new TextToSpeech(this, this);
          textView = findViewById(R.id.title);
+        showTitle = findViewById(R.id.showTitle);
         webview = findViewById(R.id.webview);
          toolbar = findViewById(R.id.toolbar);
          banner = findViewById(R.id.banner);
@@ -57,7 +58,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             ArrayList<String> chaptersList = new ArrayList();
             chaptersList.addAll(Arrays.asList(chapters));
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
             recyclerView.setLayoutManager(layoutManager);
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
             recyclerView.setAdapter(adapter);
@@ -77,7 +78,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -97,7 +98,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -118,7 +119,7 @@ public class activity_chapters_list extends AppCompatActivity implements
         chaptersList.addAll(Arrays.asList(chapters));
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
 
         chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -137,7 +138,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -151,7 +152,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -165,7 +166,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -178,7 +179,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -191,7 +192,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -200,7 +201,7 @@ public class activity_chapters_list extends AppCompatActivity implements
 
         if (subject != null && subject.equals("gk")) {
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setVisibility(View.GONE);
                 webview.setVisibility(View.VISIBLE);
@@ -219,6 +220,7 @@ public class activity_chapters_list extends AppCompatActivity implements
 
     private void setText() {
         if(pref.getKeyPrimaryLocale().equals("hi")){
+            showTitle.setText("विषय");
             if(pref.getKeyPrimarySubject().equals("maths")){
                 textView.setText("गणित");
                 banner.setImageResource(R.drawable.ic_maths_banner);
@@ -262,6 +264,7 @@ public class activity_chapters_list extends AppCompatActivity implements
         }
 
         if(pref.getKeyPrimaryLocale().equals("en")){
+            showTitle.setText("Topics");
             if(pref.getKeyPrimarySubject().equals("maths")){
                 textView.setText("Maths");
                 banner.setImageResource(R.drawable.ic_maths_banner);

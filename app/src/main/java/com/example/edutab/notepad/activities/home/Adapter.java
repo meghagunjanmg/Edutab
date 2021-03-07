@@ -2,7 +2,7 @@ package com.example.edutab.notepad.activities.home;
 
 import android.content.Intent;
 
-import com.example.edutab.notepad.Views.NoteCardView;
+import com.example.edutab.notepad.views.NoteCardView;
 import com.example.edutab.notepad.activities.note.NoteActivityIntentBuilder;
 import com.example.edutab.notepad.database.NotesDAO;
 import com.example.edutab.notepad.events.NoteDeletedEvent;

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical"
     android:id="@+id/layout"
+    android:background="@color/bg"
     android:layout_margin="8dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
-        app:cardBackgroundColor="@color/colorAccent2"
+        app:cardBackgroundColor="@color/colorPrimary"
         android:elevation="2dp"
         app:cardCornerRadius="8dp"
         android:layout_gravity="center"
@@ -45,6 +46,7 @@
             android:padding="8dp"
             style="@style/TextViewStyleHeading"
             android:textStyle="bold"
+            android:fontFamily="@font/circular"
             android:letterSpacing="0.2"
             android:textColor="@color/md_black_1000"
             android:text="File name"

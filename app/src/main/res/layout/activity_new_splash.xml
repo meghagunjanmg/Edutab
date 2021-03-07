@@ -1,47 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="@color/WhiteText"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="64sp"
         style="@style/TextViewStyleHeading"
+        android:layout_gravity="center"
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="EDU TAB"
-        android:textColor="@color/colorPrimary"
-        android:textSize="50sp"
+        android:text="@string/app_name"
+        android:textAllCaps="true"
+        android:fontFamily="@font/circular"
+        android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold" />
     <TextView
+        android:layout_gravity="center|top"
+        android:id="@+id/mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="©"
+        android:textSize="32sp"
+        android:fontFamily="@font/circular"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_margin="20dp"
         style="@style/TextViewStyleHeading"
         android:layout_gravity="center"
         android:id="@+id/subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome to class VI"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
+        android:fontFamily="@font/circular"
+        android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold" />
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_marginTop="24dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/cm"
-        android:layout_width="250dp"
-        android:layout_height="250dp">
-    </pl.droidsonroids.gif.GifImageView>
 
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="350dp">
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/mascot" />
+    </FrameLayout>
     <TextView
-        style="@style/TextViewStyleHeading"
+        android:fontFamily="@font/circular"
+        style="@style/TextViewStyleSubHeading"
         android:id="@+id/footer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:text="Trivendra Singh Rawat"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
+        android:text="Created by: \nMoksh Creations"
+        android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold" />
+
 </LinearLayout>

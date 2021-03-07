@@ -55,6 +55,7 @@ public class activity_action extends AppCompatActivity implements
 
 
         toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
         setText();

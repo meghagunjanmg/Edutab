@@ -1,4 +1,4 @@
-package com.example.edutab.notepad.Views;
+package com.example.edutab.notepad.views;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -15,7 +15,6 @@ import com.commonsware.cwac.richedit.Effect;
 import com.commonsware.cwac.richedit.RichEditText;
 import com.example.edutab.R;
 import com.example.edutab.notepad.App;
-import com.example.edutab.notepad.utils.Utils;
 
 import java.util.List;
 

@@ -1,6 +1,7 @@
 package com.example.edutab;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -31,6 +32,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.navigation.ui.AppBarConfiguration;
 
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -55,7 +58,7 @@ public class activity_subjects_lists extends AppCompatActivity implements
     private static final int CAMERA_REQUEST = 1888;
     private static final int MY_CAMERA_PERMISSION_CODE = 500;
     Toolbar toolbar;
-    TextView title;
+    TextView title,showTitle;
     ImageView imageView;
     private TextToSpeech tts;
     String text;
@@ -72,6 +75,8 @@ public class activity_subjects_lists extends AppCompatActivity implements
         prefmanager = new prefmanager(this);
         toolbar = findViewById(R.id.toolbar);
         title = findViewById(R.id.title);
+        toolbar.setTitleTextColor(Color.BLACK);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
         maths = findViewById(R.id.maths);
         geo = findViewById(R.id.geo);
@@ -95,6 +100,9 @@ public class activity_subjects_lists extends AppCompatActivity implements
         eng_gram_image = findViewById(R.id.eng_gram_image);
 
         setText();
+
+       // startAnim();
+
 
         imageView = findViewById(R.id.banner);
         imageView.setImageResource(R.drawable.ic_subject_banner);
@@ -443,7 +451,8 @@ public class activity_subjects_lists extends AppCompatActivity implements
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
-        toggle.getDrawerArrowDrawable().setColor(Color.WHITE);
+        toggle.getDrawerArrowDrawable().setColor(Color.BLACK);
+        toggle.getDrawerArrowDrawable().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         drawer.addDrawerListener(toggle);
 
         toggle.syncState();
@@ -483,6 +492,23 @@ public class activity_subjects_lists extends AppCompatActivity implements
         if (permission != PackageManager.PERMISSION_GRANTED) {
             makeRequest();
         }
+    }
+
+    private void startAnim() {
+
+        @SuppressLint("ResourceType")
+        Animation rotation = AnimationUtils.loadAnimation(getApplicationContext(), R.drawable.button_rotate);
+        rotation.setRepeatCount(Animation.INFINITE);
+        hin_image.startAnimation(rotation);
+        sans_image.startAnimation(rotation);
+        eng_image.startAnimation(rotation);
+        sci_image.startAnimation(rotation);
+        pol_image.startAnimation(rotation);
+        his_image.startAnimation(rotation);
+        math_image.startAnimation(rotation);
+        geo_image.startAnimation(rotation);
+        gk_image.startAnimation(rotation);
+        eng_gram_image.startAnimation(rotation);
     }
 
     protected void makeRequest() {
@@ -592,12 +618,13 @@ public class activity_subjects_lists extends AppCompatActivity implements
                 speakOut("Change Language");
                 Thread thread = new Thread();
                 try {
-                    Thread.sleep(1500);
+                    Thread.sleep(1000);
                 }
                 catch (Exception e){
                     e.printStackTrace();
                 }
                 thread.start();
+              startActivity(new Intent(getApplicationContext(),activity_main_splash.class));
               finish();
 
             }break;
@@ -649,12 +676,15 @@ public class activity_subjects_lists extends AppCompatActivity implements
             eng_grammar.setText("English Grammar");
             title.setText("Subjects");
         }
+
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         setText();
+       // startAnim();
     }
 
 

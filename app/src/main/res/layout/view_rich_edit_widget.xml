@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-	android:background="@drawable/bg_gradient"
+	android:background="@color/bg"
 
 	android:id="@+id/linear_layout"
 		android:layout_width="wrap_content"

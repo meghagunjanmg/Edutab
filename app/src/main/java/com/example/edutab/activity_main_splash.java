@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -12,21 +13,27 @@ import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import spencerstudios.com.bungeelib.Bungee;
 
 
 public class activity_main_splash extends AppCompatActivity implements
         TextToSpeech.OnInitListener{
     TextView title,subtitle,footer;
+    CircleImageView image;
 
     final int flags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
             | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -44,7 +51,18 @@ public class activity_main_splash extends AppCompatActivity implements
         title = findViewById(R.id.title);
         subtitle = findViewById(R.id.subtitle);
         footer = findViewById(R.id.footer);
+        image = findViewById(R.id.image);
+
         tts = new TextToSpeech(this, this);
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent= new Intent(activity_main_splash.this,intro1.class);
+                    startActivity(intent);
+                    finish();
+                }
+            },4000);
 
         getWindow().getDecorView().setSystemUiVisibility(flags);
 
@@ -74,20 +92,7 @@ public class activity_main_splash extends AppCompatActivity implements
         anim4.start();
 
 
-        Thread thread = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    sleep(4000);
-                    Intent intent = new Intent(getApplicationContext(), activity_subjects_lists.class);
-                    startActivity(intent);
-
-                } catch (Exception ex) {
-
-                }
-            }
-        };
-        thread.start();
+        intent();
         Bungee.swipeLeft(activity_main_splash.this);
 
         // get policy manager
@@ -166,6 +171,11 @@ public class activity_main_splash extends AppCompatActivity implements
     private void speakOut(String text) {
 
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+
+    private void intent(){
+
     }
 
 }

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg_gradient"
+    android:background="@color/bg"
     android:layout_height="match_parent">
     <include layout="@layout/toolbar"></include>
     <include layout="@layout/chapter_banner"></include>
@@ -23,13 +23,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:fontFamily="@font/circular"
             android:layout_weight="1"
             android:layout_gravity="center"
             android:id="@+id/title"
-            style="@style/TextViewStyleHeading"
+            style="@style/TextViewStyleNormal"
             android:textColor="@android:color/black"
             android:layout_margin="20dp"
-            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Quiz"/>
@@ -54,7 +54,7 @@
         android:layout_gravity="center"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
-        app:cardBackgroundColor="@color/colorAccent2"
+        app:cardBackgroundColor="@color/colorAccent"
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -112,8 +112,9 @@
             </RadioGroup>
             <Button
                 style="@style/TextViewStyleHeading"
-                android:background="@color/colorAccent3"
+                android:background="@color/colorAccent2"
                 android:id="@+id/submit"
+                android:fontFamily="@font/circular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="22dp"
@@ -122,8 +123,9 @@
                 android:onClick="startEvaluation"
                 android:text="submit" />
             <Button
+                android:fontFamily="@font/circular"
                 style="@style/TextViewStyleHeading"
-                android:background="@color/colorAccent3"
+                android:background="@color/colorAccent2"
                 android:id="@+id/quit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

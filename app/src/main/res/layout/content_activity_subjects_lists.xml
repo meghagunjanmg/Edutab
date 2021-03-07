@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include layout="@layout/toolbar"></include>
-  <include layout="@layout/chapter_banner"></include>
+    <include layout="@layout/chapter_banner"></include>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,7 +21,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp">
-
+                <ImageView
+                    android:id="@+id/math_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_maths_banner" />
                 <ImageView
                     android:id="@+id/math_image"
                     android:layout_width="100dp"
@@ -34,9 +40,9 @@
                     android:id="@+id/maths"
                     style="@style/TextViewStyleSubHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
-                    android:background="@color/alt_1"
+                    android:background="@color/bg_1"
                     android:text="Maths" />
             </FrameLayout>
 
@@ -58,10 +64,17 @@
                     android:id="@+id/geo"
                     style="@style/TextViewStyleSubHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
-                    android:background="@color/alt_2"
+                    android:background="@color/bg_2"
                     android:text="Geography" />
+                <ImageView
+                    android:id="@+id/geo_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_geo_banner" />
             </FrameLayout>
 
             <FrameLayout
@@ -81,10 +94,17 @@
                     android:id="@+id/his"
                     style="@style/TextViewStyleSubHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
-                    android:background="@color/alt_1"
+                    android:background="@color/bg_3"
                     android:text="History" />
+                <ImageView
+                    android:id="@+id/his_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_hindi_banner" />
             </FrameLayout>
 
             <FrameLayout
@@ -105,10 +125,17 @@
                     android:id="@+id/pol"
                     style="@style/TextViewStyleSubHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
-                    android:background="@color/alt_2"
+                    android:background="@color/bg_1"
                     android:text="Political\nScience" />
+                <ImageView
+                    android:id="@+id/pol_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_pol_banner" />
             </FrameLayout>
 
             <FrameLayout
@@ -129,10 +156,17 @@
                     android:id="@+id/sci"
                     style="@style/TextViewStyleSubHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
-                    android:background="@color/alt_1"
+                    android:background="@color/bg_2"
                     android:text="Science" />
+                <ImageView
+                    android:id="@+id/sci_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_sci_banner" />
             </FrameLayout>
 
 
@@ -151,13 +185,21 @@
                     android:src="@drawable/english_language" />
 
                 <Button
-                    android:background="@color/alt_2"
+                    android:background="@color/bg_3"
                     android:id="@+id/eng"
                     style="@style/TextViewStyleSubHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:text="English" />
+
+                <ImageView
+                    android:id="@+id/eng_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_english_banner" />
             </FrameLayout>
 
             <FrameLayout
@@ -178,10 +220,17 @@
                     android:id="@+id/sans"
                     style="@style/TextViewStyleSubHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
-                    android:background="@color/alt_1"
+                    android:background="@color/bg_1"
                     android:text="Sanskrit" />
+                <ImageView
+                    android:id="@+id/sans_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_sanskrit_banner" />
             </FrameLayout>
 
             <FrameLayout
@@ -202,10 +251,18 @@
                     android:id="@+id/hin"
                     style="@style/TextViewStyleSubHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
-                    android:background="@color/alt_2"
+                    android:background="@color/bg_2"
                     android:text="Hindi" />
+
+                <ImageView
+                    android:id="@+id/hin_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_hindi_banner" />
             </FrameLayout>
 
             <FrameLayout
@@ -222,13 +279,21 @@
                     android:src="@drawable/gk" />
 
                 <Button
-                    android:background="@color/alt_1"
+                    android:background="@color/bg_3"
                     android:id="@+id/gk"
                     style="@style/TextViewStyleSubHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:text="General Knowledge" />
+
+                <ImageView
+                    android:id="@+id/gk_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_gk_banner" />
             </FrameLayout>
 
             <FrameLayout
@@ -248,10 +313,17 @@
                     android:id="@+id/eng_grammar"
                     style="@style/TextViewStyleSubHeading"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="120dp"
                     android:layout_margin="10dp"
-                    android:background="@color/alt_2"
+                    android:background="@color/bg_1"
                     android:text="English Grammar" />
+                <ImageView
+                    android:id="@+id/eng_grammar_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_grammer_banner" />
             </FrameLayout>
 
         </LinearLayout>

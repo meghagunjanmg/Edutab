@@ -1,12 +1,18 @@
 package com.example.edutab;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,7 +45,7 @@ public class chapterListAdapter extends RecyclerView.Adapter<chapterListAdapter.
     @NonNull
     @Override
     public viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chapters_list,parent,false);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.chapter_item,parent,false);
         viewholder viewHolder=new viewholder(v);
         return viewHolder;
 
@@ -51,11 +57,13 @@ public class chapterListAdapter extends RecyclerView.Adapter<chapterListAdapter.
         holder.name.setText(chaptersList.get(position));
 
         if(position%2==0){
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#FFB4B4"));
+            holder.layout.setBackgroundColor(Color.parseColor("#7CC89C"));
+            holder.no.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#235E3C")));
         }
-        else {
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#a5d6a7"));
-        }
+        else{
+            holder.layout.setBackgroundColor(Color.parseColor("#FEC498"));
+                holder.no.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#A67A59")));
+            }
     }
 
     @Override
@@ -65,15 +73,17 @@ public class chapterListAdapter extends RecyclerView.Adapter<chapterListAdapter.
 
     public class viewholder extends RecyclerView.ViewHolder{
         protected TextView  name,no ;
-        protected CardView cardView ;
+        protected LinearLayout layout ;
+        protected ImageView image ;
 
         public viewholder(@NonNull View itemView) {
             super(itemView);
             no = (TextView) itemView.findViewById(R.id.no);
             name= (TextView) itemView.findViewById(R.id.name);
+            image=  itemView.findViewById(R.id.image);
 
-            cardView= (CardView) itemView.findViewById(R.id.card);
-            cardView.setOnClickListener(new View.OnClickListener() {
+            layout = (LinearLayout) itemView.findViewById(R.id.layout);
+            layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                   /*  if (name.getText() == "Integer") {

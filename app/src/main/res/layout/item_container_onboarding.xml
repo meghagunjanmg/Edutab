@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:layout_marginLeft="30dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:fontFamily="@font/circular"
+        style="@style/TextViewStyleSubHeading"
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_alignBottom="@id/textTitle"
+        android:fontFamily="@font/circular"
+        android:textSize="30sp"
+        android:id="@+id/textTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|end"
+        android:textColor="@color/colorPrimaryDark"
+        />
+    </LinearLayout>
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/imageOnboarding"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="8dp"
+        android:src="@drawable/logo"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"/>
+
+
+
+
+
+</RelativeLayout>

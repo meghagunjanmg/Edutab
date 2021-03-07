@@ -77,6 +77,8 @@ public class dictionary_activity extends AppCompatActivity  implements
         prefmanager = new prefmanager(this);
         toolbar = findViewById(R.id.toolbar);
         title = findViewById(R.id.title);
+
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
         tts = new TextToSpeech(this, this);
@@ -210,7 +212,7 @@ public class dictionary_activity extends AppCompatActivity  implements
                         new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                //callDictionaryApi(searchWord.getText().toString());
+                                callDictionaryApi(searchWord.getText().toString());
                             }
                         });
     }

@@ -83,6 +83,7 @@ public class activity_practice_quiz extends AppCompatActivity  implements
 
         title = findViewById(R.id.title);
         toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout
-    android:background="@drawable/bg_gradient"
+    android:background="@color/bg"
     android:id="@+id/drawer_layout"
     style="@style/MyDrawerArrowToggle"
     android:layout_width="match_parent"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@drawable/bg_gradient"
+    android:background="@color/bg"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -27,10 +27,10 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:id="@+id/title"
-            style="@style/TextViewStyleHeading"
+            android:fontFamily="@font/circular"
+            style="@style/TextViewStyleSubHeading"
             android:textColor="@android:color/black"
             android:layout_margin="20dp"
-            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Question &amp; Answer"/>
@@ -73,7 +73,8 @@
 
     <Button
         style="@style/TextViewStyleHeading"
-        android:background="@color/colorAccent3"
+        android:fontFamily="@font/circular"
+        android:background="@color/colorAccent2"
         android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

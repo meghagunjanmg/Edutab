@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import com.commonsware.cwac.richedit.RichEditText;
 import com.example.edutab.R;
-import com.example.edutab.notepad.Views.RichEditWidgetView;
+import com.example.edutab.notepad.views.RichEditWidgetView;
 import com.example.edutab.notepad.activities.addtofolders.AddToFoldersActivityIntentBuilder;
 import com.example.edutab.notepad.database.FolderNoteDAO;
 import com.example.edutab.notepad.database.NotesDAO;

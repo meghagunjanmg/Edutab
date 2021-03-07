@@ -1,4 +1,4 @@
-package com.example.edutab.notepad.Views;
+package com.example.edutab.notepad.views;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.edutab.R;
-import com.example.edutab.notepad.App;
 import com.example.edutab.notepad.database.FolderNoteDAO;
 import com.example.edutab.notepad.models.Folder;
 import com.example.edutab.notepad.models.Note;

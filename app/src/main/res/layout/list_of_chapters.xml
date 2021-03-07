@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
-    android:background="@drawable/bg_gradient"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<include layout="@layout/toolbar">
+<include android:visibility="gone" layout="@layout/toolbar">
 </include>
 
   <include layout="@layout/chapter_banner"></include>
+    <TextView
+        android:padding="12dp"
+        android:id="@+id/showTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextViewStyleSubHeading"
+        android:background="@color/bg"
+        android:textColorPrimary="@color/md_black_1000"
+        android:textColor="@color/md_black_1000"
+        />
 <androidx.recyclerview.widget.RecyclerView
+    android:background="@color/bg"
     android:id="@+id/recycler"
     android:padding="10dp"
     android:orientation="vertical"

@@ -1,6 +1,8 @@
 package com.example.edutab.notepad.activities.home;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -14,6 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.raizlabs.android.dbflow.config.FlowManager;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,10 +49,14 @@ public class NoteListFragment extends Fragment{
 		return view;
 	}
 
+	@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
 	@Override public void onActivityCreated(@Nullable Bundle savedInstanceState){
 		super.onActivityCreated(savedInstanceState);
-		if (folder != null) mToolbar.setTitle(folder.getName());
-		mToolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
+		if (folder != null)
+			mToolbar.setTitle("");
+		mToolbar.setTitleTextAppearance(getContext(),R.style.TextViewStyleSubHeading);
+		mToolbar.setBackgroundColor(Color.WHITE);
+		mToolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24);
 		mToolbar.setNavigationOnClickListener(new View.OnClickListener(){
 			@Override public void onClick(View v){
 				((HomeActivity) getActivity()).mDrawerLayout.openDrawer(Gravity.LEFT);

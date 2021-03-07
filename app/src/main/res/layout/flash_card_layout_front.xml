@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
+    android:background="@color/bg"
     android:layout_gravity="center"
     app:cardCornerRadius="10dp"
     app:cardElevation="20dp"
-    app:cardBackgroundColor="@color/colorAccent2"
+    app:cardBackgroundColor="@color/colorAccent3"
     android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -18,19 +19,19 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-                style="@style/TextViewStyleSubHeading"
+                style="@style/TextViewStyleHeading"
                 android:id="@+id/ques"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="20dp"
-                android:text="Question"
-                android:textSize="16sp" />
+                android:text="Question" />
 
             <Button
-                style="@style/TextViewStyleHeading"
-                android:background="@color/colorAccent3"
+                android:fontFamily="@font/circular"
+                style="@style/TextViewStyleSubHeading"
+                android:background="@color/colorAccent2"
                 android:id="@+id/answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
