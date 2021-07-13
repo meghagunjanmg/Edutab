@@ -118,11 +118,9 @@ public class activity_subjects_lists extends AppCompatActivity implements
                                       */
                 speakOut(maths.getText().toString());
                 prefmanager.setKeyPrimarySubject("maths");
-                TranslateAnimation animation = new TranslateAnimation(0, (math_image.getWidth() - maths.getWidth()) - maths.getX(), 0, 0);
+                TranslateAnimation animation = new TranslateAnimation(0, (maths.getWidth() - math_image.getWidth()) + math_image.getX(), 0, 0); // new TranslateAnimation (float fromXDelta,float toXDelta, float fromYDelta, float toYDelta)
                 animation.setDuration(1000); // animation duration
                 math_image.startAnimation(animation);
-
-
                 Thread thread = new Thread() {
                     @Override
                     public void run() {
@@ -137,7 +135,9 @@ public class activity_subjects_lists extends AppCompatActivity implements
                     }
                 };
                 thread.start();
+                math_image.invalidate();
             }
+
         });
 
         geo.setOnClickListener(new View.OnClickListener() {
@@ -286,9 +286,11 @@ public class activity_subjects_lists extends AppCompatActivity implements
              */
                 speakOut(eng.getText().toString());
                 prefmanager.setKeyPrimarySubject("eng");
-                TranslateAnimation animation = new TranslateAnimation(0, (eng.getWidth() - eng_image.getWidth()) + eng_image.getX(), 0, 0); // new TranslateAnimation (float fromXDelta,float toXDelta, float fromYDelta, float toYDelta)
+                TranslateAnimation animation = new TranslateAnimation(0, (eng_image.getWidth() - eng.getWidth()) - eng.getX(), 0, 0);
                 animation.setDuration(1000); // animation duration
                 eng_image.startAnimation(animation);
+
+
                 Thread thread = new Thread() {
                     @Override
                     public void run() {
@@ -303,7 +305,6 @@ public class activity_subjects_lists extends AppCompatActivity implements
                     }
                 };
                 thread.start();
-                eng_image.invalidate();
             }
         });
 
@@ -684,7 +685,6 @@ public class activity_subjects_lists extends AppCompatActivity implements
     protected void onResume() {
         super.onResume();
         setText();
-       // startAnim();
     }
 
 

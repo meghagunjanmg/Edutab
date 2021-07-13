@@ -53,8 +53,7 @@ public class dictionary_activity extends AppCompatActivity  implements
     TextView meaning;
     dictionarymodel model;
     String path;
-    HashMap<String,String> map = new HashMap<>();
-    String search,key,value;
+    String search;
     ArrayList<String> keys = new ArrayList<>();
     ArrayList<String> values = new ArrayList<>();
 
@@ -101,20 +100,13 @@ public class dictionary_activity extends AppCompatActivity  implements
                         new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void v) {
-
                                 Log.e("translation",v+"");
-
-                                // Model downloaded successfully. Okay to start translating.
-                                // (Set a flag, unhide the translation UI, etc.)
                             }
                         })
                 .addOnFailureListener(
                         new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                // Model couldn’t be downloaded or other internal error.
-                                // ...
-
                                 Log.e("translation",e.getLocalizedMessage()+"");
                             }
                         });
@@ -141,23 +133,7 @@ public class dictionary_activity extends AppCompatActivity  implements
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
-                    // callDictionaryApi(searchWord.getText().toString());
                     callgoogletranslate();
-
-                    if (keys.contains(searchWord.getText().toString().toLowerCase())) {
-                        int i = keys.indexOf(searchWord.getText().toString().toLowerCase());
-                        Log.d("testing",i+"");
-                        meaning.setVisibility(View.VISIBLE);
-                        meaning.setText(values.get(i));
-                        Log.d("testing",values.get(i));
-                    }
-                    else {
-                        meaning.setVisibility(View.VISIBLE);
-                        meaning.setText("Word Not Found");
-                    }
-
-
-
                 }
                 return false;
             }
@@ -166,29 +142,7 @@ public class dictionary_activity extends AppCompatActivity  implements
         find.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //callDictionaryApi(searchWord.getText().toString());
                 callgoogletranslate();
-
-                if (keys.contains(searchWord.getText().toString().toLowerCase())) {
-                    int i = keys.indexOf(searchWord.getText().toString().toLowerCase());
-                    Log.d("testing",i+"");
-                    meaning.setVisibility(View.VISIBLE);
-                    meaning.setText(values.get(i));
-                    Log.d("testing",values.get(i));
-                    text = searchWord.getText().toString() + " meaning is "+meaning.getText().toString();
-                    speakOut();
-                }
-            else {
-                    meaning.setVisibility(View.VISIBLE);
-                    if (prefmanager.getKeyPrimaryLocale().equals("hi")) {
-                        meaning.setText("शब्द नहीं मिला");
-                    } else meaning.setText("Word Not Found");
-
-                    text = searchWord.getText().toString() + " Word Not Found";
-                    speakOut();
-                }
-
-
             }
         });
 
@@ -212,47 +166,27 @@ public class dictionary_activity extends AppCompatActivity  implements
                         new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                callDictionaryApi(searchWord.getText().toString());
+
+                                if (keys.contains(searchWord.getText().toString().toLowerCase())) {
+                                    int i = keys.indexOf(searchWord.getText().toString().toLowerCase());
+                                    Log.d("testing",i+"");
+                                    meaning.setVisibility(View.VISIBLE);
+                                    meaning.setText(values.get(i));
+                                    Log.d("testing",values.get(i));
+                                    text = searchWord.getText().toString() + " meaning is "+meaning.getText().toString();
+                                    speakOut();
+                                }
+                                else {
+                                    meaning.setVisibility(View.VISIBLE);
+                                    if (prefmanager.getKeyPrimaryLocale().equals("hi")) {
+                                        meaning.setText("शब्द नहीं मिला");
+                                    } else meaning.setText("Word Not Found");
+
+                                    text = searchWord.getText().toString() + " Word Not Found";
+                                    speakOut();
+                                }
                             }
                         });
-    }
-
-    private void callDictionaryApi(String word) {
-        Retrofit retrofit = new Retrofit();
-        Dictionary dictionary = retrofit.client().create(Dictionary.class);
-
-        Call<List<DictionaryMainResponse>> call = dictionary.getWordMeaning(word);
-
-        call.enqueue(new Callback<List<DictionaryMainResponse>>() {
-            @Override
-            public void onResponse(Call<List<DictionaryMainResponse>> call, Response<List<DictionaryMainResponse>> response) {
-                Log.e("Dictionary"," "+response.raw().request().url());
-                Log.e("Dictionary",response.code()+"");
-
-                if(response.code()==200){
-                        meaning.setVisibility(View.VISIBLE);
-                        meaning.setText(response.body().get(0).getMeanings().get(0).getDefinitions().get(0).getDefinition().toString());
-                    text = searchWord.getText().toString() + " meaning is "+meaning.getText().toString();
-                    speakOut();
-                    }
-                    else {
-                        meaning.setVisibility(View.VISIBLE);
-                        if(prefmanager.getKeyPrimaryLocale().equals("hi")){
-                            meaning.setText("शब्द नहीं मिला");
-                        }
-                        else meaning.setText("Word Not Found");
-
-                    text = searchWord.getText().toString() + " Word Not Found";
-                    speakOut();
-                    }
-            }
-
-            @Override
-            public void onFailure(Call<List<DictionaryMainResponse>> call, Throwable t) {
-                Log.e("Dictionary",t.getLocalizedMessage());
-
-            }
-        });
     }
 
     private void setText() {
@@ -305,7 +239,6 @@ public class dictionary_activity extends AppCompatActivity  implements
 
     @Override
     public void onDestroy() {
-// Don't forget to shutdown tts!
         if (tts != null) {
             tts.stop();
             tts.shutdown();
@@ -314,7 +247,6 @@ public class dictionary_activity extends AppCompatActivity  implements
     }
 
     private void speakOut() {
-
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 }

@@ -57,13 +57,15 @@ public class chapterListAdapter extends RecyclerView.Adapter<chapterListAdapter.
         holder.name.setText(chaptersList.get(position));
 
         if(position%2==0){
-            holder.layout.setBackgroundColor(Color.parseColor("#7CC89C"));
+            holder.layout.setBackgroundResource(R.drawable.bg_30);
             holder.no.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#235E3C")));
         }
         else{
-            holder.layout.setBackgroundColor(Color.parseColor("#FEC498"));
-                holder.no.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#A67A59")));
+            //holder.layout.setBackgroundColor(Color.parseColor("#FEC498"));
+            holder.layout.setBackgroundResource(R.drawable.bg_40);
+            holder.no.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#A67A59")));
             }
+
     }
 
     @Override

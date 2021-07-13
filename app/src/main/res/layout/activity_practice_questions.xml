@@ -74,7 +74,7 @@
     <Button
         style="@style/TextViewStyleHeading"
         android:fontFamily="@font/circular"
-        android:background="@color/colorAccent2"
+        android:background="@color/colorPrimaryDark"
         android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

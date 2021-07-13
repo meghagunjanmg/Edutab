@@ -33,7 +33,7 @@
         app:cardCornerRadius="8dp"
         android:layout_margin="10dp"
         android:padding="10dp"
-        app:cardBackgroundColor="@color/colorAccent2"
+        app:cardBackgroundColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <LinearLayout
@@ -55,7 +55,7 @@
         android:id="@+id/onclick"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-        android:background="@color/colorAccent3"
+        android:background="@color/colorPrimaryDark"
     android:text="Search"/>
         <LinearLayout
             android:layout_margin="10dp"

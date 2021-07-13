@@ -12,8 +12,6 @@ import android.widget.Toast;
 import com.example.edutab.R;
 import com.example.edutab.notepad.database.AppDatabase;
 import com.google.android.material.snackbar.Snackbar;
-import com.nbsp.materialfilepicker.MaterialFilePicker;
-import com.nbsp.materialfilepicker.ui.FilePickerActivity;
 import com.raizlabs.android.dbflow.config.FlowManager;
 
 import java.io.File;
@@ -145,20 +143,22 @@ class BackupRestoreDelegate{
 
 	public void startFilePickerIntent(){
 		Toast.makeText(activity, "Select a restore file with .nbu extension", Toast.LENGTH_LONG).show();
-		new MaterialFilePicker()
+	/*	new MaterialFilePicker()
 				.withActivity(activity)
 				.withRequestCode(PICK_RESTORE_FILE_REQUEST_CODE)
 				.withFilter(Pattern.compile(".*\\.nbu$")) // Filtering files and directories by file name using regexp
 				.withFilterDirectories(false) // Set directories filterable (false by default)
 				.withHiddenFiles(false) // Show hidden files and folders
 				.start();
+
+	 */
 	}
 
 	String backupFilePath;
 
 	public void handleFilePickedWithFilePicker(int resultCode, Intent data){
 		if (resultCode == Activity.RESULT_OK){
-			showRestoreDialog(data.getStringExtra(FilePickerActivity.RESULT_FILE_PATH));
+			//showRestoreDialog(data.getStringExtra(FilePickerActivity.RESULT_FILE_PATH));
 		}else{
 			Toast.makeText(activity, "Couldn't pick the file", Toast.LENGTH_SHORT).show();
 		}

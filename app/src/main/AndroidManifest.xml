@@ -19,108 +19,126 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="pdftron_license_key"
+            android:value="${pdftronLicenseKey}"/>
+
+        <activity android:name="com.pdftron.pdf.controls.DocumentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/PDFTronAppTheme"/>
+
+        <activity
+            android:name=".PdftronMainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".notepad.activities.home.HomeActivity"
-            >
+            android:screenOrientation="landscape">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="file"/>
-                <data android:mimeType="*/*"/>
-                <data android:pathPattern=".*\\.nbu"/>
-                <data android:host="*"/>
+                <data android:scheme="file" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.nbu" />
+                <data android:host="*" />
             </intent-filter>
         </activity>
         <activity
-            android:theme="@style/AppTheme.WhiteBackground"
             android:name=".notepad.activities.editfolders.EditFoldersActivity"
             android:label="Edit Folders"
-            >
-        </activity>
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.WhiteBackground"></activity>
         <activity
             android:name=".intro1"
-            android:label="Introduction"
             android:configChanges="orientation"
-            >
-        </activity>
+            android:label="Introduction"
+            android:screenOrientation="landscape"></activity>
         <activity
             android:name=".notepad.activities.note.NoteActivity"
             android:label="Note Activity"
-            android:windowSoftInputMode="adjustResize|stateUnchanged"
-            >
-        </activity>
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize|stateUnchanged"></activity>
         <activity
-            android:theme="@style/AppTheme.WhiteBackground"
             android:name=".notepad.activities.DebugActivity"
             android:label="Debug Activity"
-            >
-        </activity>
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.WhiteBackground"></activity>
         <activity
             android:name=".notepad.activities.note.DrawingActivity"
             android:label="Drawing Activity"
-            >
-        </activity>
+            android:screenOrientation="landscape"></activity>
         <activity
-            android:theme="@style/AppTheme.WhiteBackground"
             android:name=".notepad.activities.addtofolders.AddToFoldersActivity"
             android:label="Edit Folders"
-            >
-        </activity>
-
-
-        <activity android:name=".CamaraIntentActivity"></activity>
-        <activity android:name=".activity_gallery" />
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.WhiteBackground"></activity>
+        <activity
+            android:name=".CamaraIntentActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity_gallery"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".activity_calculator"
-            android:configChanges="orientation" />
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".activity_play_video"
             android:screenOrientation="landscape" />
         <activity
             android:name=".activity_practice_questions"
-            android:configChanges="orientation" />
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".dictionary_activity"
-            android:configChanges="orientation" />
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".activity_video"
-            android:configChanges="orientation" />
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".activity_pdf"
-            android:configChanges="orientation" />
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".activity_action"
-            android:configChanges="orientation" />
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".activity_subjects_lists"
             android:configChanges="orientation"
-            android:icon="@color/colorAccent3" >
-        <intent-filter>
-            <action android:name="android.intent.action.VIEW"/>
+            android:icon="@color/colorAccent3"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-            <category android:name="android.intent.category.DEFAULT"/>
-            <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-            <data android:scheme="file"/>
-            <data android:mimeType="*/*"/>
-            <data android:pathPattern=".*\\.nbu"/>
-            <data android:host="*"/>
-        </intent-filter>
+                <data android:scheme="file" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.nbu" />
+                <data android:host="*" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activity_practice_quiz"
-            android:configChanges="orientation" />
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".activity_chapters_list"
-            android:configChanges="orientation" />
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".activity_main_splash"
-            android:screenOrientation="portrait"
             android:configChanges="orientation"
             android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
             android:stateNotNeeded="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>

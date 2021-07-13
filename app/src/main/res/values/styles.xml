@@ -52,19 +52,19 @@
 
     <style name="TextViewStyleHeading" parent="android:Widget.DeviceDefault.Light.TextView">
         <item name="android:fontFamily">@font/pm_fon</item>
-        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textColor">@color/WhiteText</item>
         <item name="android:textSize">40sp</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="TextViewStyleSubHeading" parent="android:Widget.DeviceDefault.Light.TextView">
         <item name="android:fontFamily">@font/pm_fon</item>
-        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textColor">@color/WhiteText</item>
         <item name="android:textSize">38sp</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="TextViewStyleNormal" parent="android:Widget.DeviceDefault.Light.TextView">
         <item name="android:fontFamily">@font/pm_fon</item>
-        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textColor">@color/WhiteText</item>
         <item name="android:textSize">36sp</item>
         <item name="android:textStyle">bold</item>
     </style>

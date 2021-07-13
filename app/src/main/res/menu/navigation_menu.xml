@@ -7,49 +7,46 @@
 
             <item
                 android:iconTint="@color/md_black_1000"
-                android:icon="@drawable/ic_baseline_ondemand_video_24"
+                android:icon="@drawable/ic_noun_demo_1568660"
                 android:id="@+id/demo"
                 android:title="Demonstration/प्रदर्शन" />
 
             <item
                 android:iconTint="@color/md_black_1000"
-                android:icon="@drawable/ic_baseline_library_books_24"
+                android:icon="@drawable/ic_noun_dictionary_2229622"
                 android:id="@+id/dictionary"
                 android:title="Dictionary/शब्दकोश" />
             <item
                 android:iconTint="@color/md_black_1000"
 
-                android:icon="@drawable/ic_menu_camera"
+                android:icon="@drawable/ic_noun_camera_4050716"
                 android:id="@+id/camera"
                 android:title="Camera/कैमरा" />
             <item
                 android:iconTint="@color/md_black_1000"
-                android:icon="@drawable/ic_image_box"
+                android:icon="@drawable/ic_noun_gallery_152998"
                 android:id="@+id/gallery"
                 android:title="Gallery/गैलरी" />
             <item
                 android:iconTint="@color/md_black_1000"
-                android:icon="@drawable/ic_baseline_format_list_numbered_24"               android:id="@+id/calc"
+                android:icon="@drawable/ic_noun_calculator_4044500"               android:id="@+id/calc"
                 android:title="Calculator/कैलकुलेटर" />
 
             <item
                 android:iconTint="@color/md_black_1000"
-                android:icon="@drawable/ic_note_white_24dp"
+                android:icon="@drawable/ic_noun_note_4043400"
                 android:id="@+id/notes"
                 android:title="Notes/नोट्स" />
 
             <item
                 android:iconTint="@color/md_black_1000"
-                android:icon="@drawable/ic_baseline_message_24"
+                android:icon="@drawable/ic_noun_online_class_3767530"
                 android:id="@+id/meet"
                 android:title="Online Classes/ऑनलाइन कक्षाएं" />
 
-
-
-
             <item
                 android:iconTint="@color/md_black_1000"
-                android:icon="@drawable/ic_baseline_g_translate_24"
+                android:icon="@drawable/ic_noun_translate_hindi_to_english_2532298"
                 android:id="@+id/lang"
                 android:title="Change Language/भाषा बदलें" />
         </group>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<include layout="@layout/content_activity_subjects_lists"></include>
+<include layout="@layout/new_subject_screen"></include>
     <com.google.android.material.navigation.NavigationView
         android:background="@drawable/bg_gradient"
         android:id="@+id/navigation_view"

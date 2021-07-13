@@ -112,9 +112,9 @@ public class activity_action extends AppCompatActivity implements
             text = learnTV.getText().toString();
             speakOut();
 
-            Intent i = new Intent(activity_action.this, activity_pdf.class);
-            i.putExtra("path", PdfPath);
-            Log.e("paths"," "+PdfPath);
+            Intent i = new Intent(activity_action.this, PdftronMainActivity.class);
+           // i.putExtra("path", PdfPath);
+           // Log.e("paths"," "+PdfPath);
             startActivity(i);
             Bungee.swipeLeft(activity_action.this);
         }

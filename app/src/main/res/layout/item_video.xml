@@ -46,9 +46,7 @@
             android:padding="8dp"
             style="@style/TextViewStyleHeading"
             android:textStyle="bold"
-            android:fontFamily="@font/circular"
             android:letterSpacing="0.2"
-            android:textColor="@color/md_black_1000"
             android:text="File name"
             android:layout_width="match_parent"
             android:layout_height="match_parent">

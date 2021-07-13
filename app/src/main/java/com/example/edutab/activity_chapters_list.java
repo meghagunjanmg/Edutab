@@ -2,6 +2,7 @@ package com.example.edutab;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -58,7 +59,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             ArrayList<String> chaptersList = new ArrayList();
             chaptersList.addAll(Arrays.asList(chapters));
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+            GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
             recyclerView.setLayoutManager(layoutManager);
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
             recyclerView.setAdapter(adapter);
@@ -78,7 +79,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+            GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -98,7 +99,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+            GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -119,7 +120,7 @@ public class activity_chapters_list extends AppCompatActivity implements
         chaptersList.addAll(Arrays.asList(chapters));
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+        GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
 
         chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -138,7 +139,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+            GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -152,7 +153,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+            GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -166,7 +167,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+            GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -179,7 +180,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+            GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -192,7 +193,7 @@ public class activity_chapters_list extends AppCompatActivity implements
             chaptersList.addAll(Arrays.asList(chapters));
 
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+            GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
             recyclerView.setLayoutManager(layoutManager);
 
             chapterListAdapter adapter = new chapterListAdapter(chaptersList, this);
@@ -201,7 +202,7 @@ public class activity_chapters_list extends AppCompatActivity implements
 
         if (subject != null && subject.equals("gk")) {
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+            GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setVisibility(View.GONE);
                 webview.setVisibility(View.VISIBLE);

@@ -54,7 +54,7 @@
         android:layout_gravity="center"
         app:cardCornerRadius="10dp"
         app:cardElevation="20dp"
-        app:cardBackgroundColor="@color/colorAccent"
+        app:cardBackgroundColor="@color/colorPrimary"
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
             </RadioGroup>
             <Button
                 style="@style/TextViewStyleHeading"
-                android:background="@color/colorAccent2"
+                android:background="@color/colorPrimaryDark"
                 android:id="@+id/submit"
                 android:fontFamily="@font/circular"
                 android:layout_width="match_parent"
@@ -125,7 +125,7 @@
             <Button
                 android:fontFamily="@font/circular"
                 style="@style/TextViewStyleHeading"
-                android:background="@color/colorAccent2"
+                android:background="@color/colorPrimaryDark"
                 android:id="@+id/quit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
